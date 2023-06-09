@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Angel Portfolio</title>
+  </head>
+  <body>
+    <canvas id="bgCanvas"></canvas>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large">
+        <i class="large material-icons blue">menu</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating blue" href="#start"
+            ><i class="material-icons">home</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating blue" href="#projects"
+            ><i class="material-icons">computer</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating blue" href="#knowledge"
+            ><i class="material-icons">lightbulb_outline</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating blue" href="#about"
+            ><i class="material-icons">sentiment_very_satisfied</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating blue" href="#contact"
+            ><i class="material-icons">contact_mail</i></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div id="menu">
+      <ul class="table-of-contents">
+        <li class="tooltipped" data-position="right" data-tooltip="Welcome">
+          <a href="#start"><i class="material-icons">home</i></a>
+        </li>
+
+        <li class="tooltipped" data-position="right" data-tooltip="Knowledge">
+          <a href="#knowledge"
+            ><i class="material-icons">lightbulb_outline</i></a
+          >
+        </li>
+        <li class="tooltipped" data-position="right" data-tooltip="About">
+          <a href="#about"
+            ><i class="material-icons">sentiment_very_satisfied</i></a
+          >
+        </li>
+        <li class="tooltipped" data-position="right" data-tooltip="Contact">
+          <a href="#contact"><i class="material-icons">contact_mail</i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="animationContainers" id="animationblock1">Angel</div>
+    <div class="animationContainers" id="animationblock2">Ureña</div>
+    <div id="app">
+      <div id="start" class="scrollspy">
+        <span class="section">Welcome /> </span>
+        <h1>My name is <span class="color">Angel Ureña.</span></h1>
+        <p>I create awesome <span class="color ideas"></span></p>
+        <h2><a href="#projects">Let me show you...</a></h2>
+      </div>
+      <!--
+      <div id="projects" class="scrollspy">
+        <span class="section">Projects /> </span>
+        <p>I do more than I talk.</p>
+        
+        <div class="webContainer">
+          <div class="project" data-aos="fade-up">
+            <img src="images/old.png" alt="old" />
+            <a href="projects/dev/OL-D.html"
+              ><h2 class="projectName">OL-D</h2>
+              <span>Interactive Gallery</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-left">
+            <img src="images/quantum.png" alt="quantum" />
+            <a href="projects/dev/Quantum.html"
+              ><h2 class="projectName">Quantum</h2>
+              <span>Volunteering Page</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-right">
+            <img src="images/theskembook.png" alt="tsb" />
+            <a href="projects/dev/TheSKEMBook.html"
+              ><h2 class="projectName">TheSKEMBook</h2>
+              <span>Virtual Classroom</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-left">
+            <img src="images/vsleague.png" alt="vsleague" />
+            <a href="projects/dev/VSLeague.html"
+              ><h2 class="projectName">VSLeague</h2>
+              <span>Game Tournament Page</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-down">
+            <img src="images/cedesradio.png" alt="cedesradio" />
+            <a href="projects/dev/CEDESRadioHub.html"
+              ><h2 class="projectName">CEDES Radio HUB</h2>
+              <span>Management Webpart</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-right">
+            <img src="images/staries.png" alt="staries" />
+            <a href="projects/dev/Staries.html"
+              ><h2 class="projectName">Staries</h2>
+              <span>Inmersive Reader</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-up">
+            <img src="images/correodelamor.png" alt="correodelamor" />
+            <a href="projects/dev/CorreoDelAmor.html"
+              ><h2 class="projectName">Correo del Amor</h2>
+              <span>Ticket Generator</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-left">
+            <img src="images/cavaller.png" alt="cavaller" />
+            <a href="projects/dev/Cavaller.html"
+              ><h2 class="projectName">Cavaller</h2>
+              <span>Web Videogame</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-right">
+            <a href="projects/dev/Alsnema.html"
+              ><h2 class="projectName">Alsnema</h2>
+              <img src="images/alsnema.png" alt="alsnema" />
+              <span>Cinema CMS</span></a
+            >
+          </div>
+          <div class="project" data-aos="fadeup">
+            <img src="images/sctotheworld.png" alt="sctotheworld" />
+            <a href="projects/dev/SCToTheWorld.html"
+              ><h2 class="projectName">SKEMClub TDW</h2>
+              <span>Informative Page</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-up">
+            <img src="images/patiovirtual.png" alt="patiovirtual" />
+            <a href="projects/dev/PatioVirtual.html"
+              ><h2 class="projectName">Patio Virtual</h2>
+              <span>Activity App</span></a
+            >
+          </div>
+        </div>
+        <span class="typo">EDU</span>
+        <div class="webContainer">
+          <div class="project" data-aos="fade-left">
+            <img src="images/logs.png" alt="logs" />
+            <a href="projects/edu/Logs.html"
+              ><h2 class="projectName">Log(S)</h2>
+              <span>Math Empowering</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-right">
+            <img src="images/hackaton.png" alt="hackaton" />
+            <a href="projects/edu/hackaton.html"
+              ><h2 class="projectName">Hackaton COVID19</h2>
+              <span>Innovation Summit</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-left">
+            <img src="images/insiders.png" alt="hackaton" />
+            <a href="projects/edu/Insiders.html"
+              ><h2 class="projectName">Insiders</h2>
+              <span>Mental Help</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-down">
+            <img src="images/karma.png" alt="karma" />
+            <a href="projects/edu/KARMAPAPERS.html"
+              ><h2 class="projectName">KARMA PAPER</h2>
+              <span>Learning System</span></a
+            >
+          </div>
+          <div class="project" data-aos="fade-right">
+            <img src="images/skemclub.png" alt="karma" />
+            <a href=""
+              ><h2 class="projectName">SKEMClub</h2>
+              <span>High School Innovation Club</span></a
+            >
+          </div>
+        </div>
+
+        
+      </div>
+      -->
+      <div id="knowledge" class="scrollspy">
+        <span class="section">Knowledge /> </span>
+        <p>Fast learner, easy to adapt.</p>
+        <div id="knowledgeGrid">
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> DevOps</span
+              ><span class="numberOf" data-aos="fade-right">(4)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/m4h8csr/Sd-integrations-logo-azure.png"
+                  alt="Sd-integrations-logo-azure"
+                  border="0"
+                />Microsoft Azure</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/fvHXzGn/Kisspng-amazon-com-aws-lambda-amazon-web-services-serverle-half-life-5abe90eda36d18-2085900715224383.png"
+                  alt="Kisspng-amazon-com-aws-lambda-amazon-web-services-serverle-half-life-5abe90eda36d18.2085900715224383"
+                  border="0"
+                />Amazon Lambda</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/yVCgs5z/44036562.png"
+                  alt="44036562"
+                  border="0"
+                />GitHub Actions</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/CwF9KfH/873117.png"
+                  alt="873117"
+                  border="0"
+                />Google Cloud Plataform</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Langs </span
+              ><span class="numberOf" data-aos="fade-right">(4)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/sq9TrtV/Javascript.png"
+                  alt="Javascript"
+                  border="0"
+                />JavaScript</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/CJbJGn4/python.png"
+                  alt="python"
+                  border="0"
+                />Python</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/t4kYvvR/C.png"
+                  alt="C#"
+                  border="0"
+                />C#</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/stCgWFm/typescript.png"
+                  alt="typescript"
+                  border="0"
+                />TypeScript</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> PM </span
+              ><span class="numberOf" data-aos="fade-right">(3)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/s1CbpBL/Kisspng-agile-faculty-practical-strategies-for-managing-r-values-5b1fb6c05a4f53-41442347152880505636.png"
+                  alt="Kisspng-agile-faculty-practical-strategies-for-managing-r-values-5b1fb6c05a4f53.41442347152880505636"
+                  border="0"
+                />SCRUM</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/b5HxkmF/Process.png"
+                  alt="Process"
+                  border="0"
+                />Waterfall</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/kQ7pyny/sticky-notes.png"
+                  alt="sticky-notes"
+                  border="0"
+                />Kanban</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> UI </span
+              ><span class="numberOf" data-aos="fade-right">(5)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/yp6TKmY/Xdd.png"
+                  alt="Xdd"
+                  border="0"
+                />Adobe XD</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/R0Kd4Ft/Materialui.png"
+                  alt="Materialui"
+                  border="0"
+                />Material UI</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/hV8qLrG/Materialize.png"
+                  alt="Materialize"
+                  border="0"
+                />Materialize</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/s5KbsSF/Figma.png"
+                  alt="Figma"
+                  border="0"
+                />Figma</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/SrNkntV/Boostrap.png"
+                  alt="Boostrap"
+                  border="0"
+                />Bootstrap</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Databases </span
+              ><span class="numberOf" data-aos="fade-right">(4)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/kh5DPt2/Firebase.png"
+                  alt="Firebase"
+                  border="0"
+                />Firestore (Firebase)</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/P1vTRvw/sqlserver.png"
+                  alt="sqlserver"
+                  border="0"
+                />SQL Server</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/kQbYpT4/mongodb.png"
+                  alt="mongodb"
+                  border="0"
+                />MongoDB</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/8BmdXZj/neo4j.png"
+                  alt="neo4j"
+                  border="0"
+                />Neo4J</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Frameworks </span
+              ><span class="numberOf" data-aos="fade-right">(4)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/r0xTBdG/Kisspng-sharepoint-microsoft-corporation-logo-office-365-m-sharepoint-online-microsoft-office-365-de.png"
+                  alt="Kisspng-sharepoint-microsoft-corporation-logo-office-365-m-sharepoint-online-microsoft-office-365-de"
+                  border="0"
+                />SharePoint Webpart</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/nCP9d2f/angular.png"
+                  alt="angular"
+                  border="0"
+                />Angular</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/v1xVztS/React.png"
+                  alt="React"
+                  border="0"
+                />React Native</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/QC5MwHZ/Nuxt.png"
+                  alt="Nuxt"
+                  border="0"
+                />Nuxt</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Libraries </span
+              ><span class="numberOf" data-aos="fade-right">(4)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/v1xVztS/React.png"
+                  alt="React"
+                  border="0"
+                />React</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/N7SvMbD/Vue.png"
+                  alt="Vue"
+                  border="0"
+                />Vue</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/XXynJWL/jquery.png"
+                  alt="jquery"
+                  border="0"
+                />JQuery</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/ssh0y3f/Stripe.png"
+                  alt="Stripe"
+                  border="0"
+                />Stripe</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Tools </span
+              ><span class="numberOf" data-aos="fade-right">(5)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/tHZDx4t/project.png"
+                  alt="project"
+                  border="0"
+                />Microsoft Project</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/TLGcQ8Z/PowerBI.png"
+                  alt="PowerBI"
+                  border="0"
+                />Power BI</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/yfbzRqB/vscode.png"
+                  alt="vscode"
+                  border="0"
+                />VS Code</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/M9kd5Cd/git.png"
+                  alt="git"
+                  border="0"
+                />Git</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/2hfjYC9/nodejs.png"
+                  alt="nodejs"
+                  border="0"
+                />Node JS</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Graphics </span
+              ><span class="numberOf" data-aos="fade-right">(3)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/c8DkmGk/photoshop.png"
+                  alt="photoshop"
+                  border="0"
+                />Adobe Photoshop</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/GVmgKnd/ilustrador.png"
+                  alt="ilustrador"
+                  border="0"
+                />Adobe Illustrator</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/Cw3xbYb/Sony-Vegas.webp"
+                  alt="SonyVegas"
+                  border="0"
+                />Sony Vegas</a
+              >
+            </div>
+          </div>
+          <div class="knowledgeList">
+            <p>
+              <span class="color">> Testing </span>
+              <span class="numberOf" data-aos="fade-right">(3)</span>
+            </p>
+            <div class="carousel">
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/VY60ZNx/jest.png"
+                  alt="jest"
+                  border="0"
+                />Jest</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/GRbzcG4/mocha.png"
+                  alt="mocha"
+                  border="0"
+                />Mocha</a
+              >
+              <a class="carousel-item"
+                ><img
+                  src="https://i.ibb.co/M2Z6CCx/gulpjs.png"
+                  alt="gulpjs"
+                  border="0"
+                />Gulp</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="about" class="scrollspy">
+        <span class="section">About /> </span>
+        <h1>
+          <span class="color" data-aos="zoom-in"
+            >Angel Gabriel Ureña Quesada</span
+          >
+        </h1>
+        <div id="aboutme">
+          <h2>
+            I am an IT student with experience leading teams in multiples areas including IT strategies to improve them, creating projects for companies, and working as Software Engineer Lead or Web Developer. Solid know-how on resource allocation, problem-solution environments, strategic and out-of-the-box thinking and agile environments.
+I enjoy working on projects because an improve myself as interpersonal and a professional, that way most of the time I am searching on initiative or develop my own ideas to agile process.
+          </h2>
+          <img src="images/myself.jpeg" alt="me" />
+        </div>
+        <div id="download">
+          <a class="downloads" href="">
+            <h1>Download my CV <i class="fa fa-download"></i></h1>
+          </a>
+          <a
+            class="downloads"
+            href="https://www.linkedin.com/in/angel-urena-q/"
+            target="_blank"
+          >
+            <h1>Connect with me <i class="fa fa-linkedin-square"></i></h1>
+          </a>
+          <a
+            style="margin-bottom: 150px"
+            class="downloads"
+            href="https://github.com/Gabelox14/"
+            target="_blank"
+          >
+            <h1>Look at my code <i class="fa fa-github"></i></h1>
+          </a>
+        </div>
+      </div>
+      <div id="contact" class="scrollspy">
+        <span class="section">Contact /> </span>
+        <h1>
+          <span class="color">Let's talk.</span>
+          <span
+            id="error"
+            style="font-size: 26px; color: rgb(255, 77, 77)"
+          ></span>
+        </h1>
+        <div class="row" id="sendform">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" />
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" />
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" />
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="message" class="materialize-textarea"></textarea>
+                <label for="message">Message</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <span id="circle"></span>
+
+        <button
+          style="float: left"
+          id="submitBtn"
+          class="btn-large large waves-effect waves-light"
+          name="action"
+          onclick="sendMail()"
+        >
+          Send
+          <i class="material-icons right">send</i>
+        </button>
+        <p
+          id="process"
+          style="
+            float: left;
+            font-size: 26px;
+            color: rgb(144, 255, 144);
+            margin-left: 25px;
+          "
+        ></p>
+      </div>
+    </div>
+    <div id="finalfade">Angel Urena 2023 &copy;</div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="scripts/animation.js"></script>
+  <script defer src="scripts/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</html>

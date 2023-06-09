@@ -1,0 +1,184 @@
+$font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$principalColor: #23D1BD;
+body{
+    padding: 0;
+    margin: 0;
+    background: #0a0a05;
+    height: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+*{
+    margin: 0;
+}
+#goBack{
+    position: fixed; 
+    margin-left: 25px;
+    margin-top: 25px;
+    font-family: $font;
+    color: $principalColor;
+    z-index: 20;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+#goBack:hover{
+    font-size: 40px;
+}
+@keyframes animationblock1{
+    from{
+        margin-left: 0;
+    }to{
+        margin-left: 100%;
+    }
+}
+@keyframes animationblock2{
+    from{
+        margin-left: 0;
+    }to{
+        margin-left: -100%;
+    }
+}
+.animationContainers{
+    display: grid;
+    font-size: 10rem;
+    align-items: center;
+    justify-content: center;
+    font-family: $font;
+    font-weight: 400;
+}
+#animationblock1{
+    animation: animationblock1 0.5s forwards;
+    background-color: #161616;
+    color: $principalColor;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    animation-delay: 0.2s;
+    z-index: 1000;
+}
+#animationblock2{
+    background-color: $principalColor;
+    color: #161616;
+    width: 100%;
+    height: 100vh;
+    animation: animationblock2 0.5s forwards;
+    position: absolute;
+    animation-delay: 0.7s;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+#container{
+    width: 100%;
+    min-height: 100%;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.75fr 1.25fr;
+}
+#information{
+    font-family: $font;
+    padding: 13%;
+    white-space: normal;
+    max-height: 100vh;
+
+    overflow: auto;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    border-left: $principalColor 2px solid;
+    h1{
+        color: $principalColor;
+        text-decoration: line-through;
+        font-size: 46px;
+        opacity: 0.5;
+        margin: 0;
+        
+    }
+    span{
+        font-size: 18px;
+    }
+    p{
+        font-size: 76px;
+        font-weight: 800;
+        span{
+            font-size: 76px!important;
+        }
+    }
+    h2{
+        text-align: left;
+        font-weight: 400;
+        font-size: 26px;
+        color: $principalColor;
+        
+    }
+    h3{
+        text-align: left;
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    a{
+        color: white;
+    }
+}
+@media screen and (max-width: 900px){
+    body{
+        overflow-y: auto;
+    }
+    #container{
+        grid-template-columns: auto; 
+    }
+    #information{
+        overflow: initial;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        max-height: fit-content;
+    }
+    #pictures{
+        overflow: hidden!important;
+        max-height: initial!important;
+    }
+    #goBack{
+        margin: 0;
+        left:  25px;
+        bottom: 25px!important;
+    }
+}
+#pictures{
+    background: #0c0c0c;
+    white-space: normal;
+    max-height: 100vh;
+    overflow: auto;
+    display: flex;
+    padding: 8%;
+    display: inline-block;
+    text-align: center;
+    img{
+        width: 100%;
+        vertical-align: middle;
+        margin-top: 25px;
+    }
+}
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+      background: transparent;
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #23d1bd9d; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:$principalColor; 
+  }
